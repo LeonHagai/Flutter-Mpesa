@@ -11,8 +11,8 @@ void main() {
 
 
   //Mpesa setup for consumer key and secret
-  MpesaFlutterPlugin.setConsumerKey('zvCBe6GmGFGDJjbXmGWhatcMwg2ntzOd');
-  MpesaFlutterPlugin.setConsumerSecret('iPiAOCw99a6zOMQV');
+  MpesaFlutterPlugin.setConsumerKey('your_consumer_key');
+  MpesaFlutterPlugin.setConsumerSecret('your_consumer_secret');
 
   runApp(MyApp());
 }
@@ -45,7 +45,7 @@ class MyAppState extends State<MyApp> {
           phoneNumber: "254"+phoneInputController.text,
           baseUri: Uri(scheme: 'http', host: 'sandbox.safaricom.co.ke'),
           transactionDesc: "purchase",
-          passKey: "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919");
+          passKey: "your_pass_key");
       print("transaction result: "+ transactionInitialisation.toString());
       return transactionInitialisation;
     } catch (e) {
